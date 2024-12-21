@@ -1,3 +1,3 @@
-# Main Website
+## Main Website
 
-this is gonna be the website that makes it so that its able to its own thing now
+This is the main website for socials and just showing what website's its affliated with and whats my mission with the websites.

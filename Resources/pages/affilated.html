@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Electric Productions</title>
+    <link rel="stylesheet" href="../CSS/css.css">
+    <link rel="icon" href="https://resourcess.pages.dev/image/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  </head>
+
+  <script>
+    let escapePressed = false;
+    let animationFrameId = null;
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' || event.keyCode === 27) {
+        if (!escapePressed) {
+          cancelAnimationFrame(animationFrameId);
+          animationFrameId = requestAnimationFrame(function() {
+            window.location.href = '../../index.html';
+            escapePressed = true;
+          });
+        }
+      }
+    });
+  </script>
+
+  <body>
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+      <h1><a href="../../index.html" class="link">Main Websites</a></h1>
+      <p class="text">
+        <button><a href="https://resourcess.pages.dev/">Resources</a></button>
+        <button><a href="https://worship.pages.dev/">Worship</a></button>
+       </p>
+       <br>
+       <div class="socials">
+         <a href="https://www.youtube.com/@ElectricFX">
+             <i class="fa-brands fa-youtube"></i>
+         </a>
+ 
+         <a href="https://github.com/El3ctricFX">
+             <i class="fa-brands fa-github"></i>
+         </a>
+ 
+         <a href="https://x.com/Electric_VFX">
+             <i class="fa-brands fa-x-twitter"></i>
+         </a>
+ 
+         <a href="https://discord.gg/3uffEcN9g8">
+             <i class="fa-brands fa-discord"></i>
+         </a>
+ 
+       
+       </div>
+
+      
+      </div>
+    
+  </body>
+
+</html>
