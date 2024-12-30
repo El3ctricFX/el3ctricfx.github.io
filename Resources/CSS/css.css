@@ -79,3 +79,38 @@ body, html {
     text-decoration: none;
     color: white;
 }
+
+
+
+@media (max-width: 500px) {
+  .maintext {
+    font-size: 24px;
+  }
+
+  button {
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    border: 1px solid white;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    color: white;
+    margin: 5px;
+  }
+
+  .mission-text {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-height: 400px) {
+  .mission-text {
+    font-size: 10px;
+  }
+}
