@@ -1,48 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Electric Productions</title>
-    <link rel="stylesheet" href="Resources/CSS/css.css">
+    <title>Electric | Faith & Resources</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://resourcess.pages.dev/image/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-gradient"></div>
+    <div class="floating-elements">
+        <div class="floating-cross">✝</div>
+        <div class="floating-dots"></div>
+    </div>
+    
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="avatar">
+                <div class="avatar-inner">E</div>
+            </div>
+            <h1>Electric</h1>
+            <p class="tagline">Resources & Faith Community</p>
+        </div>
 
-  <body>
-    <div class="bg-image"></div>
+        <!-- Social Links -->
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@ElectricFX" class="social-icon yt" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://github.com/El3ctricFX" class="social-icon gh" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://x.com/Electric_VFX" class="social-icon tw" target="_blank">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://discord.gg/3uffEcN9g8" class="social-icon dc" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
 
-    <div class="bg-text">
-      <h1 class="maintext">Electric's Resources</h1>
-      <p class="text">
-        <button><a href="Resources/pages/mission.html">Website's Mission</a></button>
-        <button><a href="Resources/pages/affilated.html">Website's Affiliated</a></button>
-      </p>
-      <br>
-      <div class="socials">
-        <a href="https://www.youtube.com/@ElectricFX">
-            <i class="fa-brands fa-youtube"></i>
+        <!-- Main Links -->
+        <div class="main-links">
+            <a href="https://resourcess.pages.dev/" class="link-card resources" target="_blank">
+                <div class="link-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="link-text">
+                    <h3>Resources Website</h3>
+                    <p>Tech Tools & Production Resources</p>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
+            </a>
+
+            <a href="https://worship.pages.dev/" class="link-card worship" target="_blank">
+                <div class="link-icon">
+                    <i class="fas fa-hands-praying"></i>
+                </div>
+                <div class="link-text">
+                    <h3>Worship Website</h3>
+                    <p>Faith Growth & Community</p>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
+            </a>
+        </div>
+
+        <!-- Mission Dropdown -->
+        <div class="mission-dropdown">
+            <button class="dropdown-btn" onclick="toggleMission()">
+                <i class="fas fa-scroll"></i>
+                <span>My Mission</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            
+            <div class="dropdown-content" id="missionContent">
+                <div class="mission-content">
+                    <p>Through the use of website's my mission is to get good resources to our communinty no matter what industry or background your in. On my Resources website you'll find theres a lot Tech related stuff and Production related resources. But what i believe to be the most improtant one, the Worship website</p>
+                    
+                    <p>With this website my point is to get the word of our Abba across to people and for the people that are already with faith have the ability to grow in our Faith together.</p>
+                    
+                    <p>So as said previously no matter your background my goal is to learn together as a community and just overall make it so even others are able to add to these resources so not just you guys but also i can learn a thing or two.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verse - Now Clickable -->
+        <a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A16&version=NIV" class="verse-link" target="_blank">
+            <div class="verse">
+                <div class="verse-reference">
+                    <span class="verse-book">Hebrews 13:16</span>
+                    <span class="verse-version">New International Version</span>
+                </div>
+                <p class="verse-text">And do not forget to do good and to share with others, for with such sacrifices God is pleased.</p>
+                <div class="verse-click-hint">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Click to read on Bible Gateway</span>
+                </div>
+            </div>
         </a>
-
-        <a href="https://github.com/El3ctricFX">
-            <i class="fa-brands fa-github"></i>
-        </a>
-
-        <a href="https://x.com/Electric_VFX">
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
-
-        <a href="https://discord.gg/3uffEcN9g8">
-            <i class="fa-brands fa-discord"></i>
-        </a>
-
-      
-      </div>
     </div>
 
-    
-  </body>
+    <script>
+        function toggleMission() {
+            const content = document.getElementById('missionContent');
+            const btn = document.querySelector('.dropdown-btn');
+            const chevron = btn.querySelector('.fa-chevron-down');
+            
+            content.classList.toggle('active');
+            
+            if (content.classList.contains('active')) {
+                chevron.style.transform = 'rotate(180deg)';
+                btn.style.borderRadius = '20px 20px 0 0';
+                // Calculate the exact height needed for content
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                chevron.style.transform = 'rotate(0deg)';
+                btn.style.borderRadius = '20px';
+                content.style.maxHeight = '0';
+            }
+        }
 
+        // Initialize with exact height calculation
+        window.addEventListener('load', function() {
+            const content = document.getElementById('missionContent');
+            if (content.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        });
+
+        // Add hover effects
+        document.querySelectorAll('.social-icon, .link-card, .verse-link').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                if (item.classList.contains('verse-link')) {
+                    item.style.transform = 'translateY(-3px)';
+                } else {
+                    item.style.transform = 'translateY(-4px)';
+                }
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
 </html>
