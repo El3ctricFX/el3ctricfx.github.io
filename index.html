@@ -63,6 +63,21 @@
 
         <!-- Main Links -->
         <div class="main-links">
+            <!-- Portfolio (Top) -->
+            <!-- Updated Portfolio Link -->
+<a href="http://electricproductions.pages.dev/" class="link-card portfolio" target="_blank">
+    <div class="link-icon">
+        <i class="fa-solid fa-clapperboard"></i>
+    </div>
+    <div class="link-text">
+        <h3>Portfolio</h3>
+        <p>Video Montages & Creative Work</p>
+    </div>
+    <div class="link-arrow">
+        <i class="fas fa-external-link-alt"></i>
+    </div>
+</a>
+
             <a href="https://resourcess.pages.dev/" class="link-card resources" target="_blank">
                 <div class="link-icon">
                     <i class="fas fa-code"></i>
@@ -109,7 +124,7 @@
             </div>
         </div>
 
-        <!-- Verse - Now Clickable -->
+        <!-- Verse -->
         <a href="https://www.biblegateway.com/passage/?search=Hebrews%2013%3A16&version=NIV" class="verse-link" target="_blank">
             <div class="verse">
                 <div class="verse-reference">
@@ -136,7 +151,6 @@
             if (content.classList.contains('active')) {
                 chevron.style.transform = 'rotate(180deg)';
                 btn.style.borderRadius = '20px 20px 0 0';
-                // Calculate the exact height needed for content
                 content.style.maxHeight = content.scrollHeight + 'px';
             } else {
                 chevron.style.transform = 'rotate(0deg)';
@@ -145,7 +159,6 @@
             }
         }
 
-        // Initialize with exact height calculation
         window.addEventListener('load', function() {
             const content = document.getElementById('missionContent');
             if (content.classList.contains('active')) {
@@ -153,7 +166,6 @@
             }
         });
 
-        // Add hover effects
         document.querySelectorAll('.social-icon, .link-card, .verse-link').forEach(item => {
             item.addEventListener('mouseenter', () => {
                 if (item.classList.contains('verse-link')) {

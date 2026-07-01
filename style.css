@@ -278,6 +278,11 @@ body {
     box-shadow: 0 8px 20px rgba(139, 92, 246, 0.2);
 }
 
+.portfolio .link-icon {
+    background: linear-gradient(135deg, #6200ff, #9b51e0);
+    box-shadow: 0 8px 20px rgba(98, 0, 255, 0.2);
+}
+
 .link-text {
     flex: 1;
     position: relative;
